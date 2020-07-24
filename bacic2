@@ -50,25 +50,25 @@ int main(void)
     }
 }
 #include <stdio.h>
-int main(void)
-{
-    int element[335];
-    int i;
-    for(i=0;i<335;i++)
-    {
-        if(i==0)
-        {
-            element[i]=0;
+int main (void){
+    int number[335];
+    int i;int j;
+
+    for(i=0;i<335;i++){
+        if(i==0){
+            number[i]=0;
         }
         else if(i%3==0||i%10==3||i/100==3||(i%100)/10==3)
         {
-            element[i]=3;
+            number[i]=3;
         }
-        else
+        else{
+            number[i]=i%10;
+        }
+        if((j=getchar())=='\n')
         {
-            element[i]=i%10;
+        printf("%d: %d",i,number[i]);
         }
-        printf("%d: %d\n",i,element[i]);
     }
     return 0;
 }
