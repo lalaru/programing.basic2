@@ -1,0 +1,74 @@
+# programing.basic2
+#include <stdio.h>
+int main(void)
+{
+    int year;
+    for(year=1896;year<=2040;year++)
+    {
+        if((year%4==0&&year%100!=0)||year%400==0)
+        {
+        printf("%d ",year);
+        }
+    }
+    return 0;
+}
+#include <stdio.h>
+double ave(double,double);
+int main(void)
+{
+    double average;
+    average=ave(12.3,34.5);
+    printf("%f\n",average);
+    return 0;
+}
+double ave(double x,double y)
+{
+    double average;
+    average=(x+y)/2;
+    return average;
+}
+#include <stdio.h>
+int main(void)
+{
+    int i;
+    char name[3][10]={"A","B","C"};
+    int score[3][3]={{50,60,70},{60,70,50},{100,80,90}};
+    for(i=0;i<3;i++)
+    {
+        printf("%sさんの合計点:%d点\n",name[i],score[i][0]+score[i][1]+score[i][2]);
+    }
+}
+#include <stdio.h>
+int main(void)
+{
+    int i;
+    char subject[3][10]={"算数","国語","理科"};
+    int score[3][3]={{50,60,100},{60,70,80},{70,50,90}};
+    for(i=0;i<3;i++)
+    {
+        printf("%sの平均点:%d\n",subject[i],(score[i][0]+score[i][1]+score[i][2])/3);
+    }
+}
+#include <stdio.h>
+int main(void)
+{
+    int element[335];
+    int i;
+    for(i=0;i<335;i++)
+    {
+        if(i==0)
+        {
+            element[i]=0;
+        }
+        else if(i%3==0||i%10==3||i/100==3||(i%100)/10==3)
+        {
+            element[i]=3;
+        }
+        else
+        {
+            element[i]=i%10;
+        }
+        printf("%d: %d\n",i,element[i]);
+    }
+    return 0;
+}
